@@ -1,12 +1,16 @@
+import { ThemeProvider } from '@mui/system';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Root from "./Root";
+import { theme } from "./Styles";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Root />
+    <ThemeProvider theme={theme}>
+      <Root />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
